@@ -48,22 +48,20 @@ class Persona {
     }
 }
 
-const spiderman = new Persona('Nombre 1', 'Spider', 'Soy');
-console.log({ spiderman });
+class Heroe extends Persona {
+    clan = "Sin Clan";
 
+    constructor(nombre, codigo, frase) {
+        super(nombre, codigo, frase);//Super tiene que ir arriba antes de this
+        this.clan = "Los Avengers";
+    }
+
+    quienSoy() {
+        console.log(`Soy ${this.nombre},${this.clan}`);
+        super.quienSoy(); //<--Aqui se esta llamando el anteriormente creado.
+    }
+}
+
+const spiderman = new Heroe('Nombre 1', 'Spider', 'Soy');
+console.log(spiderman);
 spiderman.quienSoy();
-spiderman.miFrase();
-
-spiderman.setComidaFavorita = 'El pie de ceraza';
-//spiderman.nemesiss = 'Duende';
-/* spiderman.comida = 'Duende verda' */
-/* console.log(spiderman.comida);
-console.log(spiderman.getComidaFavorita); */
-
-console.log(Persona._conteo);
-Persona.mensaje();
-
-Persona.propiedadExterna = "Hola Mundo";
-
-console.log(Persona.propiedadExterna);
-console.log(Persona);
