@@ -1,15 +1,27 @@
-const jokeUrl = 'https://api.chucknorris.io/jokes/random';
-/* 
+const jokeUrl = 'https://api.chucknorris.io/jokes/random'
 
-fetch(jokeUrl).then(resp => {
-    resp.json().then(({ id, value }) => {
-        console.log(id);
-        console.log(value);
-    });
-}) */
+const obtenerChiste = async () => {
+    // fetch(jokeUrl).then(resp => resp.json()).then(({ id, value }) => {
+    //     console.log(id);
+    //     console.log(value);
+    // })
 
-// fetch(jokeUrl).then(resp => resp.json()).then(console.log)
+    try {
+        const resp = await fetch(jokeUrl)
+        if (!resp.ok) throw 'No se pudo realizar ';
+        const { id, value } = await resp.json()
 
-fetch(jokeUrl).then(resp => resp.json()).then(({ id, value }) => {
-    console.log(id, value);
-})
+        return { id, value };
+
+    } catch (error) {
+        throw error;
+    }
+
+
+}
+
+
+
+export {
+    obtenerChiste
+}
