@@ -1,4 +1,4 @@
-// import { init } from "./js/chistes-page";
+/* // import { init } from "./js/chistes-page";
 
 // import { init } from "./js/usuarios-page";
 
@@ -22,4 +22,8 @@ CRUD.borrarUsuario(1).then(console.log)
 
 // obtenerUsuarios().then(console.log)
 
-// init()
+// init() */
+
+import { init } from './js/archivos-page';
+
+init();
