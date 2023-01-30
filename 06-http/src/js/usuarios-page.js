@@ -82,5 +82,22 @@ export const init = async () => {
     // Por cada usuario, llamar la función crearFila (for, forEach)
     // Colocar el init en el index.js, para que se ejecute la creación
 
+    // let element = document.getElementById('ul');
+    // let fragment = document.createDocumentFragment();
+    // let browsers = ['Firefox', 'Chrome', 'Opera',
+    //     'Safari', 'Internet Explorer'];
+
+    // browsers.forEach(function (browser) {
+    //     let li = document.createElement('li');
+    //     li.textContent = browser;
+    //     fragment.appendChild(li)
+    //     console.log(fragment);
+    // });
+
+    // element.appendChild(fragment);
+
+
+
+
 }
 
