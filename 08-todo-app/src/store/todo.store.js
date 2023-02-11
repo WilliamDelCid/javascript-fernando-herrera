@@ -47,7 +47,18 @@ const addTodo = (description) => {
     state.todos.push(new Todo(description))
 }
 
+
+/**
+ * 
+ * @param {*} todoId 
+ */
 const toggleTodo = (todoId) => {
+    state.todos = state.todos.map(todo => {
+        if (todo.id === todoId) {
+            todo.done = !todo.done;
+        }
+        return todo;
+    });
 }
 
 const deleteTodo = (todoId) => {
