@@ -1,6 +1,7 @@
 import './style.css'
 import javascriptLogo from './javascript.svg'
 import { ChuckNorrisApp } from './src/chucknorris/chuck-norris-app'
+import { UsersApp } from './src/users/users-app';
 
 
 document.querySelector('#app').innerHTML = `
@@ -20,4 +21,9 @@ document.querySelector('#app').innerHTML = `
 `
 const element = document.querySelector('.card');
 
-ChuckNorrisApp(element)
+// ChuckNorrisApp(element)
+UsersApp(element);
+// document.addEventListener('click', (event) => {
+//   event.target.classList.toggle('hide-modal');
+//   console.log(event.target.classList);
+// })
